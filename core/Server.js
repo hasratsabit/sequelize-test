@@ -13,10 +13,16 @@ class Server {
       this.app = ExpressServer.app;
       this.router = ExpressServer.router;
       RouteLoader.load(this);
+      this.initializeDB(this.app);
     } catch(err) {
       Logger.error(err);
       throw err;
     }
+  }
+
+  async initializeDB() {
+    this.app.db = require('../config/db');
+    await this.app.db.sequelize.sync();
   }
 }
 

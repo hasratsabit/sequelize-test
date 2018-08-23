@@ -31,8 +31,4 @@ db.posts.hasMany(db.comments);
 db.posts.belongsTo(db.users);  
 db.users.hasMany(db.posts);
 
-db.sequelize.sync().then(() => {
-  Logger.db('Sequelize synced');
-});
-
 module.exports = db;  
