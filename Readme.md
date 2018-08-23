@@ -1,5 +1,5 @@
 *  Run npm install
-*  Modify `config/db.js` and `sequelize/config/config.json` to fill in your db information
+*  Modify `config/env.js` and `sequelize/config/config.json` to fill in your db information
 *  Run `node_modules/.bin/sequelize db:create`
 *  Run `node_modules/.bin/sequelize db:migrate`
 *  Run `node_modules/.bin/sequelize db:seed:all`
