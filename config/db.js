@@ -6,11 +6,15 @@ Config.load();
 const env = Config.env; 
 const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {  
   host: env.DATABASE_HOST,
-  port: env.DATABASE_PORT,
+  port: +env.DATABASE_PORT,
   dialect: env.DATABASE_DIALECT,
+  dialectOptions: {
+    encrypt: true
+  },
   define: {
     underscored: true
-  }
+  },
+  schema: 'dbo'
 });
 
 // Connect all the models/tables in the database to a db object, 

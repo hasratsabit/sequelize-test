@@ -11,7 +11,6 @@ class UsersRoutes {
   register(router) {
     Logger.trace('UsersRoutes : register');
     router.get('/users', async (req, res) => {
-      await db.sequelize.sync();
       let users = await db.users.findAll({
         include: [
           {
