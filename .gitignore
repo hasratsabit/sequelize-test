@@ -88,3 +88,5 @@ typings/
 
 # pid
 pid
+
+config/env/loc.env

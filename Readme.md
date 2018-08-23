@@ -1,5 +1,5 @@
 *  Run `npm install`
-*  Create file `config/env/loc.env` to match `config/env/schema.env` and fill out
+*  Create file `config/env/loc.env` to match `config/env/schema.env` and fill out node_modules/.bin/sequelize db:seed:all
 *  Modify `sequelize/config/config.json` to fill in your db information again for migrations and seeds
 *  Run `node_modules/.bin/sequelize db:create`
 *  Run `npm start` - This will create the tables on startup. If you run the sequelize migrations, the foreign key relationships will not be established
