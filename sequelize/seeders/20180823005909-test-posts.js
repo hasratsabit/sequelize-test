@@ -58,8 +58,8 @@ module.exports = {
 
     const Op = Sequelize.Op
     return queryInterface.bulkDelete('posts', {
-     user_id: {
-       [Op.in]: userIds
-      }}, {})
+      user_id: {
+        [Op.in]: userIds
+      }}, {});
   }
 };

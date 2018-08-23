@@ -1,7 +1,9 @@
-'use strict'
+'use strict';
 
-const Sequelize = require('sequelize');  
-const env = require('./env');  
+const Sequelize = require('sequelize');
+const {Config} = require('microservice_core');  
+Config.load();
+const env = Config.env; 
 const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {  
   host: env.DATABASE_HOST,
   port: env.DATABASE_PORT,

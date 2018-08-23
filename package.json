@@ -3,19 +3,37 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "sequelize-test": "Start.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/Start",
+    "stop": "bin/stop.sh",
+    "test": "mocha tests/all.suite.js",
+    "test_unit": "mocha tests/unit.suite.js",
+    "test_integration": "mocha tests/integration.suite.js",
+    "lint": "eslint . || true"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lee Shaffer",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "eslint": "^4.12.1",
+    "microservice_core": "git+https://github.com/lmshaffe/microservice_core.git",
     "moment": "^2.22.2",
     "sequelize": "^4.38.0",
     "sequelize-cli": "^4.1.1",
     "tedious": "^2.6.4",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-things": "^0.2.0",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmshaffe/sequelize-test.git"
   }
 }
