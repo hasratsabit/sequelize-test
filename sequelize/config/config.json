@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "Password1!",
+    "database": "leetest",
+    "host": "localhost",
+    "port": 32772,
+    "dialect": "mssql"
+  }
+}
