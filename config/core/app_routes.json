@@ -1,5 +1,6 @@
 {
   "routes": [
-    "../../../../routes/core/Test.routes.js"
+    "../../../../routes/core/Test.routes.js",
+    "../../../../routes/users/Users.routes.js"
   ]
 }

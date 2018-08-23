@@ -9,7 +9,6 @@ class TestRoutes {
   register(router) {
     Logger.trace('TestRoutes : register');
     router.get('/test', (req, res) => {
-      console.log(Config.env.DATABASE_DIALECT);
       res.json({message: 'Success'});
     });
     return router;

@@ -1,7 +1,7 @@
 'use strict';
 
 const Sequelize = require('sequelize');
-const {Config} = require('microservice_core');  
+const {Config, Logger} = require('microservice_core');  
 Config.load();
 const env = Config.env; 
 const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {  
@@ -30,5 +30,9 @@ db.comments.belongsTo(db.posts);
 db.posts.hasMany(db.comments);  
 db.posts.belongsTo(db.users);  
 db.users.hasMany(db.posts);
+
+db.sequelize.sync().then(() => {
+  Logger.db('Sequelize synced');
+});
 
 module.exports = db;  
